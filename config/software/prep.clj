@@ -21,6 +21,7 @@
           :steps [{:command "rm" :args ["-fR" "/opt/opscode"]}
                   {:command "mkdir" :args ["-p" "/opt/opscode/embedded/lib"]}
                   {:command "mkdir" :args ["-p" "/opt/opscode/embedded/bin"]}
-                  {:command "mkdir" :args ["-p" "/opt/opscode/bin"]}])
+                  {:command "mkdir" :args ["-p" "/opt/opscode/bin"]}]
+                  {:command "cp" :args [(file-str *omnibus-home-dir* project-name ".changelog") "/opt/opscode/changelog"]})
 
 
